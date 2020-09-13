@@ -1,0 +1,30 @@
+// 存储路由模块的tag信息
+const CURRENT_ROUTE_TAG_DATA = 'CURRENT_ROUTE_TAG_DATA'
+
+// 存储会议信息
+const ACTIVITY_INFO = 'ACTIVITY_INFO'
+
+// 存储门票和表单的关联关系数据
+const FORM_TICKET_DATA = 'FORM_TICKET_DATA'
+
+// 存储活动的菜单
+const ACTIVITY_MENUS = 'ACTIVITY_MENUS'
+
+// 存储个人中心的菜单
+const USER_CENTER_MENUS = 'USER_CENTER_MENUS'
+
+// 存储当前路由的path和tag
+const CURRENT_ROUTER_PATH = 'CURRENT_ROUTER_PATH'
+
+//存储当前用户信息
+const CURRENT_USER = "CURRENT_USER";
+
+export {
+    CURRENT_ROUTE_TAG_DATA,
+    ACTIVITY_INFO,
+    FORM_TICKET_DATA,
+    ACTIVITY_MENUS,
+    USER_CENTER_MENUS,
+    CURRENT_ROUTER_PATH,
+    CURRENT_USER,
+}

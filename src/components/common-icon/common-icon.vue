@@ -1,0 +1,46 @@
+<template>
+  <component :is="iconType" :type="iconName" :color="iconColor" :size="iconSize"/>
+</template>
+
+<script>
+import Icons from '@/components/icons'
+export default {
+  name: 'CommonIcon',
+  components: { Icons },
+  props: {
+    type: {
+      type: String,
+      default: 'ios-people',
+      required: false
+    },
+    color: String,
+    size: Number
+  },
+  computed: {
+    iconType () {
+      return this.type.indexOf('_') === 0 ? 'Icons' : 'Icon'
+    },
+    iconName () {
+      return this.iconType === 'Icons' ? this.getCustomIconName(this.type) : this.type
+    },
+    iconSize () {
+      return this.size || (this.iconType === 'Icons' ? 20 : undefined)
+    },
+    iconColor () {
+      return this.color || ''
+    }
+  },
+  mounted() {
+    console.log('this :>> ', this.type);
+  },
+  methods: {
+    getCustomIconName (iconName) {
+      return iconName.slice(1)
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>
